@@ -32,7 +32,7 @@ export default function Header() {
 
         <div className="flex items-center rounded-full border border-[#2a2a33] bg-[#0d0d16] p-1">
           {languages.map((l) => (
-            <button key={l} onClick={() => setLanguage(l)} className={`relative cursor-pointer rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${lang === l ? "text-white" : "text-slate-400 hover:text-white"}`}>
+            <button aria-label="Mudança de idioma entre Português e Inglês" key={l} onClick={() => setLanguage(l)} className={`relative cursor-pointer rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${lang === l ? "text-white" : "text-slate-400 hover:text-white"}`}>
               {lang === l && <motion.span layoutId="lang-pill" className="absolute inset-0 rounded-full bg-[#271a4a] ring-1 ring-violet-400/30" transition={{ type: "spring", stiffness: 400, damping: 30 }}/>}
               <span className="relative z-10">{l}</span>
             </button>
