@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
+body {
+  background-color: rgb(8, 8, 15);
+  }
