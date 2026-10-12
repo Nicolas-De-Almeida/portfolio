@@ -22,6 +22,7 @@ export const aboutContent = {
     orbitPlaceholder: "ainda tô resolvendo isso aqui",
     technologiesTitle: "O que eu já sei:",
   },
+
   en: {
     titleLine1: "Clean code, peaceful mind.",
     titleLine2: "— Just kidding, I just created another file called final-test-this-time-it-works-forsure.js.",
@@ -31,7 +32,7 @@ export const aboutContent = {
     projectsButton: "Explore my projects",
     contactButton: "Let's talk",
     orbitPlaceholder: "ainda tô resolvendo isso aqui",
-    technologiesTitle:  "What I Know So Far:",
+    technologiesTitle:  "What I know so far:",
   },
 };
 
@@ -43,6 +44,7 @@ export const infoCards = [
       title: "Formação:",
       text: "Engenharia de Software · PUC Minas (2º período)",
     },
+
     en: {
       title: "Education:",
       text: "Software Engineering · PUC Minas (2nd semester)",
@@ -52,22 +54,24 @@ export const infoCards = [
     id: "interests",
     pt: {
       title: "Interesses:",
-    text: "Desenvolvimento web, design de interfaces, videogames, idiomas e uma boa discussão."
+    text: "Desenvolvimento Web, Design de Interfaces, Videogames, Idiomas e uma boa Discussão."
     },
+
     en: {
       title: "Interests:",
-      text: "Web development, interface design, video games, languages, and a good discussion."
+      text: "Web Development, Interface Design, Video Games, Languages, and a good Discussion."
     },
   },
   {
     id: "goals",
     pt: {
       title: "Aprendendo:",
-      text: "JavaScript, APIs REST, Spring Boot, SQL, e Espanhol",
+      text: "JavaScript, APIs REST, Spring Boot, e Espanhol",
     },
+
     en: {
       title: "Currently Learning:",
-      text: "JavaScript, REST APIs, Spring Boot, SQL, and Spanish",
+      text: "JavaScript, REST APIs, Spring Boot, and Spanish",
     },
   },
 ];

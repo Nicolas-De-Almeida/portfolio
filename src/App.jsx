@@ -19,7 +19,7 @@ function App() {
       <Header language={language} setLanguage={setLanguage} />
       <main>
         <About language={language} />
-        <Projects />
+        <Projects language={language}/>
         <Experiences />
         <Contact />
       </main>

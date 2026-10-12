@@ -14,7 +14,7 @@ export default function Header({language, setLanguage}) {
   const [active, setActiveLink] = useState("AboutMe");
 
   return (
-    <header className="fixed top-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl -translate-x-1/2">
+    <header className="fixed top-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-7xl -translate-x-1/2">
       <div className="flex flex-wrap items-center justify-between gap-y-2 rounded-3xl border border-[#2a2a33] bg-[#14141e]/90 px-4 py-2 backdrop-blur-xl md:rounded-full">
         <a href="#AboutMe" className="flex items-center gap-3">
           <span className="text-2xl font-bold bg-gradient-to-r from-indigo-900 via-indigo-800 to-[#271a4a] bg-clip-text text-transparent">Nícolas De Almeida</span>

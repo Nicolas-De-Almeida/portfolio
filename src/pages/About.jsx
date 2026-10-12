@@ -7,7 +7,7 @@ export default function About({language}) {
     const about = aboutContent[language];
 
     return (
-        <section id="AboutMe" className="mx-auto min-h-screen w-full max-w-5xl scroll-mt-24 px-4 pb-16 pt-32">
+        <section id="AboutMe" className="mx-auto min-h-screen w-full max-w-7xl scroll-mt-24 px-4 pb-16 pt-32">
             {/* Título */}
             <h1 className="mt-4 bg-gradient-to-r from-violet-100 via-violet-300 to-sky-300 bg-clip-text text-5xl font-bold leading-tight text-transparent md:text-7xl">
                 {about.titleLine1}
@@ -69,10 +69,10 @@ export default function About({language}) {
                 <div className="grid gap-6 md:grid-cols-3">
                     {infoCards.map((card) => (
                     <div key={card.id}>
-                        <h3 className="text-sm font-semibold text-violet-300">
+                        <h3 className=" text-lg font-bold text-violet-300">
                             {card[language].title}
                         </h3>
-                        <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                        <p className="mt-2 text-md leading-relaxed text-slate-300">
                             {card[language].text}
                         </p>
                     </div>
