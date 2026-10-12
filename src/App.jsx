@@ -23,7 +23,7 @@ function App() {
         <Experiences />
         <Contact />
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

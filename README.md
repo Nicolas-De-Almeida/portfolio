@@ -28,7 +28,7 @@ Wireframes criados no Figma.
 ![Wireframe - Sobre Mim](docs/wireframes/sobre-mim-wireframe.png)
 
 ### Projetos
-*Em breve.*
+![Wireframe - Sobre Mim](docs/wireframes/meus-projetos-wireframe.png)
 
 ### Experiências
 *Em breve.*
