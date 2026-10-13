@@ -14,6 +14,7 @@ import { contactContent, contactLinks, directEmail } from "../data/contact";
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const AUTOREPLY_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
 
 const icons = {
     email: FaEnvelope,
@@ -55,32 +56,42 @@ export default function Contact({ language }) {
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
+    event.preventDefault();
 
-        const newErrors = validate(values);
-        setErrors(newErrors);
-        if (Object.keys(newErrors).length > 0) return;
+    const newErrors = validate(values);
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) return;
 
-        // Campo-armadilha contra robôs(humanos não veem nem preenchem)
-        if (values.website) {
+    // Campo-armadilha contra robôs (humanos não veem nem preenchem)
+    if (values.website) {
         setStatus("success");
         return;
+    }
+
+    setStatus("sending");
+    try {
+        const params = { name: values.name.trim(), email: values.email.trim(), message: values.message.trim(),};
+
+        await emailjs.send(SERVICE_ID, TEMPLATE_ID, params, {
+            publicKey: PUBLIC_KEY,
+        });
+
+        // Resposta automática() se falhar, o envio principal continua valendo)
+        if (AUTOREPLY_TEMPLATE_ID) {
+            try {
+                await emailjs.send(SERVICE_ID, AUTOREPLY_TEMPLATE_ID, params, {
+                    publicKey: PUBLIC_KEY,
+                });
+            } catch (error) {
+                console.error("Falha na resposta automática:", error);
+            }
         }
 
-        setStatus("sending");
-        try {
-        await emailjs.send( SERVICE_ID, TEMPLATE_ID, {
-            name: values.name.trim(),
-            email: values.email.trim(),
-            message: values.message.trim(),
-            },
-            { publicKey: PUBLIC_KEY }
-        );
         setStatus("success");
         setValues(initialValues);
-        } catch {
+    } catch {
         setStatus("error");
-        }
+    }
     };
 
     return (
