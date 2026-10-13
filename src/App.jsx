@@ -20,7 +20,7 @@ function App() {
       <main>
         <About language={language} />
         <Projects language={language}/>
-        <Experiences />
+        <Experiences language={language} />
         <Contact />
       </main>
       <Footer/>
