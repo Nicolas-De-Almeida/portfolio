@@ -18,12 +18,12 @@ function App() {
     <div>
       <Header language={language} setLanguage={setLanguage} />
       <main>
-        <About language={language} />
+        <About language={language}/>
         <Projects language={language}/>
-        <Experiences language={language} />
-        <Contact language={language} />
+        <Experiences language={language}/>
+        <Contact language={language}/>
       </main>
-      <Footer/>
+      <Footer language={language}/>
     </div>
   );
 }

@@ -1,12 +1,14 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { footerContent } from "../data/footer";
 
 const socials = [
   { label: "GitHub", href: "https://github.com/Nicolas-De-Almeida", icon: FaGithub, external: true },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/nicolasdealmeida", icon: FaLinkedinIn, external: true },
 ];
 
-export default function Footer() {
+export default function Footer( { language } ) {
   const year = new Date().getFullYear();
+  const content = footerContent[language];
 
   return (
     <footer className="mx-auto w-full max-w-7xl px-4 pb-8 pt-10">
@@ -15,10 +17,10 @@ export default function Footer() {
       <div className="mt-6 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
         <div className="space-y-1">
           <p className="text-sm text-slate-300">
-            © {year} Nícolas De Almeida. Programar é vida.
+            © {year} Nícolas De Almeida. {content.signature}
           </p>
           <p className="text-xs text-slate-500">
-            📚 Studying(as always...)
+            {content.status}
           </p>
         </div>
 
