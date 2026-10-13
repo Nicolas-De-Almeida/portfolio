@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import Experiences from "./pages/Experiences";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import Stars from "./components/Stars";
 
 function App() {
   const [language, setLanguage] = useState("pt");
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div>
+      <Stars />
       <Header language={language} setLanguage={setLanguage} />
       <main>
         <About language={language}/>

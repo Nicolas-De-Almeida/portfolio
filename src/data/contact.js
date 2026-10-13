@@ -1,4 +1,4 @@
-const email = "nicolas.dealmeida.br@gmail.com";
+const email = import.meta.env.VITE_CONTACT_EMAIL;
 
 export const directEmail = email;
 
