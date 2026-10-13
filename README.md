@@ -25,16 +25,16 @@ Este é o repositório do meu portfólio profissional, com o objetivo de apresen
 Wireframes criados no Figma.
 
 ### Sobre Mim
-![Wireframe - Sobre Mim](docs/wireframes/sobre-mim-wireframe.png)
+![Wireframe - Sobre Mim](docs/wireframes/sobre-mim-wireframe.webp)
 
 ### Projetos
-![Wireframe - Sobre Mim](docs/wireframes/meus-projetos-wireframe.png)
+![Wireframe - Sobre Mim](docs/wireframes/meus-projetos-wireframe.webp)
 
 ### Experiências
-*Em breve.*
+![Wireframe - Sobre Mim](docs/wireframes/minhas-experiencias-wireframe.webp)
 
 ### Contato
-*Em breve.*
+![Wireframe - Sobre Mim](docs/wireframes/contato-wireframe.webp)
 
 ---
 
