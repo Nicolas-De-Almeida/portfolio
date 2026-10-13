@@ -141,7 +141,7 @@ export const githubProfile = "https://github.com/Nicolas-De-Almeida";
 export const projectsContent = {
     pt: {
         label: "02 / MEUS PROJETOS",
-        title: "O que eu já fiz:",
+        title: "Alguns bugs, vários aprendizados.",
         subtitle: "Do primeiro experimento ao mais recente, cada projeto me ensinou algo novo — e me tirou horas de sono.",
         githubButton: "Explorar o GitHub",
         imagePlaceholder: "Imagem do projeto em breve",
@@ -153,7 +153,7 @@ export const projectsContent = {
     },
     en: {
         label: "02 / MY PROJECTS",
-        title: "What I've built so far:",
+        title: "A Few Bugs, Plenty of Lessons.",
         subtitle: "From my first experiment to my latest release, every project has taught me something new — and cost me hours of sleep.",
         githubButton: "Explore GitHub",
         imagePlaceholder: "Project image coming soon",

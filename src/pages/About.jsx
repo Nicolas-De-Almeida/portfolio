@@ -50,7 +50,7 @@ export default function About({language}) {
             <Card className="mt-6">
                 <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                     <div>
-                        <h2 className="text-lg font-semibold text-white">
+                        <h2 className="text-lg font-bold text-violet-400">
                             {about.technologiesTitle}
                         </h2>
                     </div>
