@@ -21,7 +21,7 @@ function App() {
         <About language={language} />
         <Projects language={language}/>
         <Experiences language={language} />
-        <Contact />
+        <Contact language={language} />
       </main>
       <Footer/>
     </div>

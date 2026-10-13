@@ -9,7 +9,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mx-auto w-full max-w-7xl px-4 pb-8 pt-16">
+    <footer className="mx-auto w-full max-w-7xl px-4 pb-8 pt-10">
       <div className="h-px w-full bg-gradient-to-r from-transparent via-violet-400/30 to-transparent" />
 
       <div className="mt-6 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">

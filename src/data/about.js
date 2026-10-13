@@ -12,7 +12,7 @@ export const technologies = [
 // Titulo Principal
 export const aboutContent = {
   pt: {
-    titleLine1: "Código limpo, mente tranquila.",
+    titleLine1: "Código Limpo, Mente Tranquila.",
     titleLine2: "— Mentira, acabei de criar mais um arquivo chamado `teste-final-agora-vai-garantido.js`.",
     greeting: "Opa, eu sou o Nícolas.",
     intro: "Sou estudante de Engenharia de Software na PUC Minas. Por que resolvi fazer esse curso? Bom, tenho umas ideias meio malucas e achei que aprender a programar seria um bom começo para tirá-las do papel.",
@@ -24,7 +24,7 @@ export const aboutContent = {
   },
 
   en: {
-    titleLine1: "Clean code, peaceful mind.",
+    titleLine1: "Clean Code, Peaceful Mind.",
     titleLine2: "— Just kidding, I just created another file called final-test-this-time-it-works-forsure.js.",
     greeting: "Wassup, I'm Nícolas",
     intro: "I'm a Software Engineering student at PUC Minas. Why did I choose this field? Well, I have some pretty crazy ideas, and I figured learning to code was a good place to start bringing them to life.",

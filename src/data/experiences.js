@@ -59,7 +59,7 @@ const experienceList = [
     export const experiencesContent = {
     pt: {
         label: "03 / EXPERIÊNCIAS",
-        title: "Um pouco de tudo, sempre aprendendo.",
+        title: "Um Pouco de Tudo, Sempre Aprendendo.",
         subtitle: "Nem sempre seguindo um plano, mas sempre levando algo comigo (meu notebook).",
         present: "Atual",
         closingTitle: "O código é meu, o bug é de Todos.",
