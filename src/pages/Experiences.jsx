@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Card from "../components/Cards";
 import { experiences, experiencesContent } from "../data/experiences";
+import Float from "../components/Float";
 
 // Deslocamento em "escada" no desktop repetindo a cada 3 cards
 const stairs = ["md:ml-0", "md:ml-[6%]", "md:ml-[12%]"];
@@ -53,45 +54,47 @@ export default function Experiences({ language }) {
                             </span>
 
                             <div className={`w-full md:w-[82%] ${stairs[index % stairs.length]}`}>
-                                <Card>
-                                    <div className="flex items-start justify-between gap-4">
-                                        <div className="flex items-center gap-3">
-                                            {/* Empresa foto(se tiver) */}
-                                            <span aria-hidden="true" className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#2a2a33] bg-[#0d0d16] text-sm font-semibold text-violet-300">
-                                                {text.company.slice(0, 2).toUpperCase()}
-                                            </span>
-                                            <div>
-                                                <p className="font-semibold text-white">{text.company}</p>
-                                                <p className="text-xs text-slate-500">{text.place}</p>
+                                <Float duration={7 + (index % 3)} delay={index * 0.6}>
+                                    <Card>
+                                        <div className="flex items-start justify-between gap-4">
+                                            <div className="flex items-center gap-3">
+                                                {/* Empresa foto(se tiver) */}
+                                                <span aria-hidden="true" className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#2a2a33] bg-[#0d0d16] text-sm font-semibold text-violet-300">
+                                                    {text.company.slice(0, 2).toUpperCase()}
+                                                </span>
+                                                <div>
+                                                    <p className="font-semibold text-white">{text.company}</p>
+                                                    <p className="text-xs text-slate-500">{text.place}</p>
+                                                </div>
                                             </div>
+
+                                            <p className={`flex items-center gap-2 text-xs capitalize ${isCurrent ? "text-teal-300" : "text-slate-400"}`}>
+                                                {isCurrent && (
+                                                    <span className="h-2 w-2 rounded-full bg-teal-300" />
+                                                )}
+                                                {period}
+                                            </p>
                                         </div>
 
-                                        <p className={`flex items-center gap-2 text-xs capitalize ${isCurrent ? "text-teal-300" : "text-slate-400"}`}>
-                                            {isCurrent && (
-                                                <span className="h-2 w-2 rounded-full bg-teal-300" />
-                                            )}
-                                            {period}
+                                        <p className="mt-5 text-xs uppercase tracking-wider text-violet-300">
+                                            {text.type}
                                         </p>
-                                    </div>
+                                        <h3 className="mt-1 text-2xl font-semibold text-white lg:text-3xl">
+                                            {text.role}
+                                        </h3>
+                                        <p className="mt-3 leading-relaxed text-slate-400 lg:text-lg">
+                                            {text.description}
+                                        </p>
 
-                                    <p className="mt-5 text-xs uppercase tracking-wider text-violet-300">
-                                        {text.type}
-                                    </p>
-                                    <h3 className="mt-1 text-2xl font-semibold text-white lg:text-3xl">
-                                        {text.role}
-                                    </h3>
-                                    <p className="mt-3 leading-relaxed text-slate-400 lg:text-lg">
-                                        {text.description}
-                                    </p>
-
-                                    <ul className="mt-4 flex flex-wrap gap-2">
-                                        {experience.tags.map((tag) => (
-                                        <li key={tag} className="rounded-full border border-[#2a2a33] bg-[#0d0d16] px-3 py-1 text-xs text-slate-400">
-                                            {tag}
-                                        </li>
-                                        ))}
-                                    </ul>
-                                </Card>
+                                        <ul className="mt-4 flex flex-wrap gap-2">
+                                            {experience.tags.map((tag) => (
+                                            <li key={tag} className="rounded-full border border-[#2a2a33] bg-[#0d0d16] px-3 py-1 text-xs text-slate-400">
+                                                {tag}
+                                            </li>
+                                            ))}
+                                        </ul>
+                                    </Card>
+                                </Float>
                             </div>
                         </motion.li>
                     );

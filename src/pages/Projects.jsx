@@ -4,6 +4,7 @@ import { FaGithub, FaStar } from "react-icons/fa6";
 import Card from "../components/Cards";
 import { githubProfile, projects, projectsContent } from "../data/projects";
 import ImageCarousel from "../components/ImageCarousel";
+import Float from "../components/Float";
 
 export default function Projects({ language }) {
     const content = projectsContent[language];
@@ -41,37 +42,39 @@ export default function Projects({ language }) {
 
                             {/* Card do projeto (alterna esquerda/direita no desktop) */}
                             <div className={`md:row-start-1 ${isLeft ? "md:col-start-1" : "md:col-start-2"}`}>
-                                <Card>
-                                    {/* Imagem dos projetos */}
-                                    <div className="mt-2">
-                                        <ImageCarousel images={project.images} alt={text.name} placeholder={content.imagePlaceholder} previousLabel={content.previousImage} nextLabel={content.nextImage}/>
-                                    </div>
-                                    <div className="flex items-center justify-between text-xs pt-5">
-                                        <span className="uppercase tracking-wider text-violet-300">
-                                            {text.type}
-                                        </span>
-                                        <span className="text-slate-400">{project.year}</span>
-                                    </div>
+                                <Float duration={6 + (index % 3)} delay={index * 0.8}>
+                                    <Card>
+                                        {/* Imagem dos projetos */}
+                                        <div className="mt-2">
+                                            <ImageCarousel images={project.images} alt={text.name} placeholder={content.imagePlaceholder} previousLabel={content.previousImage} nextLabel={content.nextImage}/>
+                                        </div>
+                                        <div className="flex items-center justify-between text-xs pt-5">
+                                            <span className="uppercase tracking-wider text-violet-300">
+                                                {text.type}
+                                            </span>
+                                            <span className="text-slate-400">{project.year}</span>
+                                        </div>
 
-                                    <h3 className="mt-3 text-2xl font-semibold text-white">
-                                        {text.name}
-                                    </h3>
-                                    <p className="mt-3 leading-relaxed text-slate-400">
-                                        {text.description}
-                                    </p>
+                                        <h3 className="mt-3 text-2xl font-semibold text-white">
+                                            {text.name}
+                                        </h3>
+                                        <p className="mt-3 leading-relaxed text-slate-400">
+                                            {text.description}
+                                        </p>
 
-                                    <ul className="mt-4 flex flex-wrap gap-2">
-                                        {project.technologies.map((technology) => (
-                                        <li key={technology} className="rounded-full border border-[#2a2a33] bg-[#0d0d16] px-3 py-1 text-xs text-slate-400">
-                                            {technology}
-                                        </li> ))}
-                                    </ul>
+                                        <ul className="mt-4 flex flex-wrap gap-2">
+                                            {project.technologies.map((technology) => (
+                                            <li key={technology} className="rounded-full border border-[#2a2a33] bg-[#0d0d16] px-3 py-1 text-xs text-slate-400">
+                                                {technology}
+                                            </li> ))}
+                                        </ul>
 
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-violet-300 transition-colors hover:text-white">
-                                        <FaGithub size={16} />
-                                        {content.githubButton}
-                                    </a>
-                                </Card>
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-violet-300 transition-colors hover:text-white">
+                                            <FaGithub size={16} />
+                                            {content.githubButton}
+                                        </a>
+                                    </Card>
+                                </Float>
                             </div>
 
                             {/* Ano*/}
