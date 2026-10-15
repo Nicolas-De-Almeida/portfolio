@@ -28,10 +28,10 @@ body {
 
   /* Fica quase parada e só de vez em quando dá um clarão */
   @keyframes flare {
-    0%, 85%, 100% { opacity: 0.3; transform: scale(1); box-shadow: none; }
+    0%, 70%, 100% { opacity: 0.3; transform: scale(1); box-shadow: none; }
     92% {
       opacity: 1;
-      transform: scale(2.2);
+      transform: scale(2.4);
       box-shadow: 0 0 12px 3px rgba(196, 181, 253, 0.9);
     }
   }

@@ -1,5 +1,5 @@
 const STAR_COUNT = 90;
-const FLARE_COUNT = 15;
+const FLARE_COUNT = 25;
 
 const random = (min, max) => Math.random() * (max - min) + min;
 

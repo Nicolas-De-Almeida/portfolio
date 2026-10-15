@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa6";
 import Card from "../components/Cards";
 import { aboutContent, infoCards, technologies } from "../data/about";
+import WakaTimeCard from "../components/WakaTimeCard";
 
 export default function About({language}) {
     // Aqui recebe qual idioma mostrar
@@ -40,10 +41,7 @@ export default function About({language}) {
                     </div>
                 </Card>
 
-                {/* Ainda vou arrumar aqui */}
-                <div className="flex min-h-72 items-center justify-center rounded-3xl border border-dashed border-[#2a2a33] text-sm text-slate-500">
-                    {about.orbitPlaceholder}
-                </div>
+                <WakaTimeCard language={language} />
             </div>
 
             {/* Tecnologias */}

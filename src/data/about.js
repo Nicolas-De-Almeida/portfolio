@@ -19,7 +19,6 @@ export const aboutContent = {
     status: "Aberto a colaborações e oportunidades de aprendizado",
     projectsButton: "Ver meus projetos",
     contactButton: "Bora conversar",
-    orbitPlaceholder: "ainda tô resolvendo isso aqui",
     technologiesTitle: "O que eu já sei:",
   },
 
@@ -31,7 +30,6 @@ export const aboutContent = {
     status: "Open to collaborations and learning opportunities",
     projectsButton: "Explore my projects",
     contactButton: "Let's talk",
-    orbitPlaceholder: "ainda tô resolvendo isso aqui",
     technologiesTitle:  "What I know so far:",
   },
 };
