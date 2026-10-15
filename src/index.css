@@ -1,48 +1,48 @@
+
 @import "tailwindcss";
 
 body {
   background-color: rgb(8, 8, 15);
   color: white;
+}
 
+.star,
+.star-flare {
+  position: absolute;
+  border-radius: 9999px;
+  background: #e0e7ff;
+}
+
+.star {
+  opacity: 0.15;
+  animation: twinkle ease-in-out infinite;
+}
+
+.star-flare {
+  opacity: 0.3;
+  animation: flare ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.7; }
+}
+
+/* Fica quase parada e só de vez em quando dá um clarão */
+@keyframes flare {
+  0%, 70%, 100% { opacity: 0.3; transform: scale(1); box-shadow: none; }
+  92% {
+    opacity: 1;
+    transform: scale(2.4);
+    box-shadow: 0 0 12px 3px rgba(196, 181, 253, 0.9);
+  }
+}
+
+/* Quem prefere menos movimento no sistema não vê as animações */
+@media (prefers-reduced-motion: reduce) {
   .star,
   .star-flare {
-    position: absolute;
-    border-radius: 9999px;
-    background: #e0e7ff;
+    animation: none;
+    opacity: 0.4;
   }
-
-  .star {
-    opacity: 0.15;
-    animation: twinkle ease-in-out infinite;
-  }
-
-  .star-flare {
-    opacity: 0.3;
-    animation: flare ease-in-out infinite;
-  }
-
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.15; }
-    50% { opacity: 0.7; }
-  }
-
-  /* Fica quase parada e só de vez em quando dá um clarão */
-  @keyframes flare {
-    0%, 70%, 100% { opacity: 0.3; transform: scale(1); box-shadow: none; }
-    92% {
-      opacity: 1;
-      transform: scale(2.4);
-      box-shadow: 0 0 12px 3px rgba(196, 181, 253, 0.9);
-    }
-  }
-
-  /* Quem prefere menos movimento no sistema não vê as animações */
-  @media (prefers-reduced-motion: reduce) {
-    .star,
-    .star-flare {
-      animation: none;
-      opacity: 0.4;
-    }
-  }
-  }
-
+}
