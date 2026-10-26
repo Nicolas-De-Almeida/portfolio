@@ -51,7 +51,7 @@ const projectList = [
     id: "Acessi+",
     year: 2026,
     technologies: ["HTML", "CSS", "JavaScript", "BootStrap", "JSON Server", ],
-    github: "https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0438200-g4-1",
+    github: null,
     images: projectImages("Acessi-plus", ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"]),
     pt: {
         type: "Projeto acadêmico",
@@ -93,7 +93,7 @@ const projectList = [
     id: "GeoSolar",
     year: 2026,
     technologies: ["HTML", "CSS", "React"],
-    github: "https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-2-ti2-8243100-mentalist.git",
+    github: null,
     images: projectImages("GeoSolar", ["01.webp"]),
     pt: {
         type: "Projeto acadêmico",
@@ -144,6 +144,7 @@ export const projectsContent = {
         title: "Alguns Bugs, Vários Aprendizados.",
         subtitle: "Do primeiro experimento ao mais recente, cada projeto me ensinou algo novo — e me tirou horas de sono.",
         githubButton: "Explorar o GitHub",
+        privateRepo: "Repositório privado (projeto acadêmico)",
         imagePlaceholder: "Imagem do projeto em breve",
         nextProject: "Mostrar próximo projeto",
         hint: "Sempre tem mais um",
@@ -156,6 +157,7 @@ export const projectsContent = {
         title: "A Few Bugs, Plenty of Lessons.",
         subtitle: "From my first experiment to my latest release, every project has taught me something new — and cost me hours of sleep.",
         githubButton: "Explore GitHub",
+        privateRepo: "Private repository (academic project)",
         imagePlaceholder: "Project image coming soon",
         nextProject: "Show next project",
         hint: "There's always one more",

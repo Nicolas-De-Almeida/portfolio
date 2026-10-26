@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaStar } from "react-icons/fa6";
+import { FaGithub, FaLock, FaStar } from "react-icons/fa6";
 import Card from "../components/Cards";
 import { githubProfile, projects, projectsContent } from "../data/projects";
 import ImageCarousel from "../components/ImageCarousel";
@@ -69,10 +69,17 @@ export default function Projects({ language }) {
                                             </li> ))}
                                         </ul>
 
+                                        {project.github ? (
                                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-violet-300 transition-colors hover:text-white">
                                             <FaGithub size={16} />
                                             {content.githubButton}
                                         </a>
+                                        ) : (
+                                        <p className="mt-5 inline-flex items-center gap-2 text-sm text-slate-500">
+                                            <FaLock size={14} />
+                                            {content.privateRepo}
+                                        </p>
+                                        )}
                                     </Card>
                                 </Float>
                             </div>
