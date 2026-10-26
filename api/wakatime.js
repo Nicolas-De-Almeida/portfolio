@@ -1,6 +1,6 @@
-// Vercel Function: GET /api/codando
-import { handleCodando } from "./_codando.js";
+// Vercel Function: GET /api/wakatime?range=last_7_days
+import { handleWakaTime } from "./_wakatime.js";
 
 export default function handler(req, res) {
-    return handleCodando(req, res, process.env);
+  return handleWakaTime(req, res, process.env);
 }
