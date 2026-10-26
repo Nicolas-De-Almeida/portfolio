@@ -30,8 +30,7 @@ const toItems = (list = [], limit = 20) =>
         percent,
         }));
 
-// Devolve só o que a tela usa.
-// ⚠️ Não inclui a lista de projetos, de propósito (poderia vazar nomes privados).
+// Devolve só o que a tela usa. Não inclui a lista de projetos.
 function normalize(data, today, mode) {
     return {
         mode,

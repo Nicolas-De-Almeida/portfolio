@@ -1,11 +1,9 @@
 // "Codando agora": em que projeto que eu estou mexendo no editor neste momento.
-// Lê os heartbeats do dia (privados: precisam do token OAuth, escopo read_heartbeats)
-// e olha o último: se chegou há até ACTIVE_MINUTES, você eu estou codando.
-//
+// Lê os heartbeats do dia (privados: precisam do token OAuth, escopo read_heartbeats) e olha o último: se chegou há até ACTIVE_MINUTES, você eu estou codando.
 // Privacidade:
-//   • o arquivo (entity) nunca sai daqui (traz o caminho completo);
-//   • projeto fora de PUBLIC_PROJECTS vira "projeto privado", sem nome e sem branch;
-//   • só heartbeats de arquivo contam (os de navegador são descartados).
+// o arquivo (entity) nunca sai daqui (traz o caminho completo);
+// projeto fora de PUBLIC_PROJECTS vira "projeto privado", sem nome e sem branch;
+// só heartbeats de arquivo contam (os de navegador são descartados).
 
 import WAKATIME_CONFIG from "../src/config/wakatimeConfig.js";
 import { fetchWakaTime, hasAccessToken } from "./_oauth.js";
@@ -28,7 +26,7 @@ function send(res, status, body, cache = "no-store") {
     res.end(JSON.stringify(body));
 }
 
-// Nome do editor como o WakaTime manda → como aparece na tela
+// Nome do editor como o WakaTime manda -> como aparece na tela
 const EDITOR_NAMES = {
     vscode: "VS Code",
     cursor: "Cursor",
@@ -93,7 +91,7 @@ async function callWakaTime(path, env) {
     return Array.isArray(json?.data) ? json.data : [];
 }
 
-// id do user agent → nome do editor (1 h de cache)
+// id do user agent -> nome do editor (1 h de cache)
 let editors = { at: 0, map: new Map() };
 async function editorsMap(env) {
     if (Date.now() - editors.at < EDITORS_CACHE_MS) return editors.map;
@@ -137,7 +135,7 @@ async function build(env) {
         editorsMap(env),
     ]);
 
-    // Logo depois da meia-noite, a sessão pode ter começado ontem
+    // Logo depois da meia noite, a sessão pode ter começado ontem
     let heartbeats = ofToday;
     if (minutesSinceMidnight(now) < CODING_NOW.BREAK_MINUTES + CODING_NOW.ACTIVE_MINUTES) {
         const yesterday = dayInTimezone(now - 24 * 60 * 60 * 1000);
